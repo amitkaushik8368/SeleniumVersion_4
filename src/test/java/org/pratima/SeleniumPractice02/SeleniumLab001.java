@@ -3,6 +3,7 @@ package org.pratima.SeleniumPractice02;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,6 +16,7 @@ public class SeleniumLab001
     @Test
     void launchNaukri() throws InterruptedException {
         WebDriver driver = new EdgeDriver();
+        WebDriver driver1 = new ChromeDriver();
         driver.manage().window().maximize();
 
         driver.navigate().to("https://www.naukri.com");

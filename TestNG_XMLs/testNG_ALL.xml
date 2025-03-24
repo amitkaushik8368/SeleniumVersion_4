@@ -1,0 +1,21 @@
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/amitk/IdeaProjects/SeleniumVersion_4">
+        <classes>
+            <class name="org.pratima.SeleniumPractice01.LaunchBrowser01">
+                <methods>
+                    <include name="runTheTest"/>
+                </methods>
+            </class>
+            <class name="org.pratima.SeleniumPractice02.SeleniumLab001">
+                <methods>
+                    <include name="launchNaukri"/>
+                </methods>
+            </class>
+            <class name="org.pratima.SeleniumPractice02.SeleniumLab_002">
+                <methods>
+                    <include name="urlTitleValidations"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
