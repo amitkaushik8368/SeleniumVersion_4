@@ -5,7 +5,7 @@
     <!-- Test for LaunchBrowser01 -->
     <test name="SeleniumPractice">
         <classes>
-            <class name="org.pratima.SeleniumPractice02.SeleniumLab002"/>
+            <class name="org.pratima.SeleniumPractice02.SeleniumLab006"/>
         </classes>
     </test>
 

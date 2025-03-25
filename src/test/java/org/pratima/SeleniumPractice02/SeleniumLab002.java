@@ -2,16 +2,14 @@ package org.pratima.SeleniumPractice02;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 /*
 The purpose of this Lab is to do some validations on app.vwo.com website
  */
-public class SeleniumLab_002
+public class SeleniumLab002
 {
 
     @Description("This is my first allure reporting test")
