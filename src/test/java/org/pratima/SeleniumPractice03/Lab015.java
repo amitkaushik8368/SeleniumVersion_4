@@ -24,12 +24,14 @@ public class Lab015
         driver.findElement(By.xpath("//a[contains(text(), 'JavaScript Alerts')]")).click();
         driver.findElement(By.xpath("//button[@onclick = 'jsPrompt()']")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.alertIsPresent());
-        Alert alert = driver.switchTo().alert();
-
-        alert.sendKeys("Amit Sharma");
+        Alert alert= wait.until(ExpectedConditions.alertIsPresent());
         Thread.sleep(3000);
-        Assert.assertEquals(driver.findElement(By.id("result")).getText(), "You successfully clicked an alert");
+
+
+        alert.sendKeys("Amit Sharma is an Automation Tester");
+        alert.accept();
+//        Thread.sleep(3000);
+        Assert.assertEquals(driver.findElement(By.id("result")).getText(), "You entered: Amit Sharma is an Automation Tester");
         Thread.sleep(3000);
         driver.quit();
     }
