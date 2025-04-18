@@ -2,6 +2,7 @@ package org.pratima.SeleniumPractice02;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -23,40 +24,25 @@ public class SeleniumLab008 {
         EdgeDriver driver = new EdgeDriver(edgeOptions);
         driver.get("https://app.vwo.com");
 
-        /*
-        <input
-            type="email"
-            class="text-input W(100%)"
-            name="username"
-            id="login-username"
-            data-qa="hocewoqisi">
-         */
 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement emailField = driver.findElement(By.name("username"));
-        emailField.sendKeys("admin@admin.com");
+        js.executeScript("arguments[0].value = 'admin@admin.com'", emailField);
 
-        /*
-        <input
-            type="password"
-            class="text-input W(100%)"
-            name="password"
-            id="login-password"
-            data-qa="jobodapuxe">
-         */
+
         WebElement passField = driver.findElement(By.id("login-password"));
-        passField.sendKeys("admin");
+        js.executeScript("arguments[0].value='A@1234'", passField);
 
 
-        /*
-        <button
-            type="submit"
-            id="js-login-btn"
-            class="btn btn--positive btn--inverted W(100%) H(48px) Fz(16px)"
-            onclick="login.login(event)"
-            data-qa="sibequkica">
-         */
+
         WebElement loginButton = driver.findElement(By.id("js-login-btn"));
         loginButton.click();
+
+
+        js.executeScript("arguments[0].click();", loginButton);
+
+
+
 
         Thread.sleep(3000);
 

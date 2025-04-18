@@ -12,6 +12,9 @@ public class SeleniumNewLab01 extends BoilerPlateClass
         driver.get("https://www.guru99.com/");
         driver.findElement(By.id("kt-accordion-header-835168"));
 
+
+
+
     }
 
 
