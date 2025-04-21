@@ -1,6 +1,8 @@
 package org.pratima;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterMethod;
@@ -16,9 +18,9 @@ public class BoilerPlateClass
     @BeforeMethod
     public void startBrowser()
     {
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        driver = new EdgeDriver(options);
+        driver = new ChromeDriver(options);
     }
 
     @AfterMethod
