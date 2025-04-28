@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Selenium_Version_4_Practice" verbose="1" parallel="false">
+
+    <!-- Test for LaunchBrowser01 -->
+    <test name="SeleniumPractice">
+        <classes>
+            <class name="org.pratima.SeleniumPractice04.SeleniumLab_11_TestNG_1"/>
+            <class name="org.pratima.SeleniumPractice04.SeleniumLab_12_TestNG_2"/>
+        </classes>
+    </test>
+
+</suite>

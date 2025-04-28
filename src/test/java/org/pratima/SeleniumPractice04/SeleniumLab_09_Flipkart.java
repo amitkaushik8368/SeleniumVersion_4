@@ -19,17 +19,18 @@ public class SeleniumLab_09_Flipkart extends BoilerPlateClass
 
 
         driver.get("https://www.flipkart.com/");
-        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class = '_1wE2Px']")));
-        WebElement hoverElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class = '_1wE2Px']")));
-        WebElement insideHover = driver.findElement(By.xpath("//a[@class = '_1BJVlg _11MZbx']"));
-        WebElement clickElement = driver.findElement(By.xpath("//a[contains(text(), 'Women Heels')]"));
 
+        WebElement loginPopup = driver.findElement(By.xpath("//div[@class = '_39Ul0t']"));
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.invisibilityOf(loginPopup));
+
+        WebElement hoverElement = driver.findElement(By.xpath("//div[@class = 'zlQd20 _1eDlvI']//child::img[1]"));
 
         Actions actions = new Actions(driver);
 
-        actions.moveToElement(hoverElement).moveToElement(insideHover).click(clickElement).build().perform();
+        actions.perform();
+        actions.moveToElement(hoverElement).perform();
 
 
     }
