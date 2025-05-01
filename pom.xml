@@ -52,5 +52,25 @@
       <version>2.11.0</version> <!-- Or the latest -->
     </dependency>
 
+    <!-- Apache POI core library -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>5.2.3</version> <!-- Use the latest available -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>5.2.3</version> <!-- Or use the latest -->
+    </dependency>
+
+    <!-- Required for handling compressed formats (used internally) -->
+    <dependency>
+      <groupId>org.apache.xmlbeans</groupId>
+      <artifactId>xmlbeans</artifactId>
+      <version>5.1.1</version>
+    </dependency>
+
   </dependencies>
 </project>
