@@ -1,5 +1,6 @@
 package org.pratima.SeleniumPractice04;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -30,9 +31,17 @@ public class SeleniumLab_ReadExcel
         }
 
         Sheet sheet = workbook.getSheetAt(1);
+        System.out.println(workbook.getNumberOfSheets());
 
         Row row = sheet.getRow(0);
-        System.out.println(row.getCell(0).getStringCellValue());
+
+        for (Cell cell : row)
+        {
+            System.out.println(cell);
+
+        }
+
+        System.out.println(row.getHeight());
 
 
     }
